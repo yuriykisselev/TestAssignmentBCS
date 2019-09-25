@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 @Component
-public class StockPriceCalculator implements Calculator{
+public class CalculatorServiceImpl implements CalculatorService {
     private static String publicToken = "pk_0f4db72e15a840f18e888969c29e1871";
     private static String latestPriceUrlTemplate= "https://cloud.iexapis.com/stable/stock/%s/quote/latestPrice?token=%s";
     private static String sectorUrlTemplate= "https://cloud.iexapis.com/stable/stock/%s/company?token=%s";
@@ -41,6 +41,7 @@ public class StockPriceCalculator implements Calculator{
             RestTemplate restTemplate = new RestTemplate();
             Double latestPrice = restTemplate.getForObject(String.format(latestPriceUrlTemplate, symbol, publicToken), Double.class);
             Company stockCompany = restTemplate.getForObject(String.format(sectorUrlTemplate, symbol, publicToken), Company.class);
+            //todo check nullPointer
             String sector = stockCompany.getSector();
             Double stockValue = latestPrice*volume;
 

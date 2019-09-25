@@ -5,6 +5,6 @@ import com.bcs.restendpoint.model.OutputData;
 import org.springframework.stereotype.Service;
 
 @Service
-public interface Calculator {
+public interface CalculatorService {
     OutputData calculateData(InputData inputData);
 }
