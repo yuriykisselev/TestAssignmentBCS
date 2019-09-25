@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class InputData {
+    private Integer value;
     private List<Stock> stocks;
 
     public InputData() {
@@ -11,6 +12,19 @@ public class InputData {
 
     public InputData(List<Stock> stocks) {
         this.stocks = stocks;
+    }
+
+    public InputData(Integer value, List<Stock> stocks) {
+        this.value = value;
+        this.stocks = stocks;
+    }
+
+    public Integer getValue() {
+        return value;
+    }
+
+    public void setValue(Integer value) {
+        this.value = value;
     }
 
     public List<Stock> getStocks() {
@@ -25,19 +39,21 @@ public class InputData {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        InputData that = (InputData) o;
-        return Objects.equals(stocks, that.stocks);
+        InputData inputData = (InputData) o;
+        return Objects.equals(value, inputData.value) &&
+                Objects.equals(stocks, inputData.stocks);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(stocks);
+        return Objects.hash(value, stocks);
     }
 
     @Override
     public String toString() {
-        return "InputStocks{" +
-                "stocks=" + stocks +
+        return "InputData{" +
+                "value=" + value +
+                ", stocks=" + stocks +
                 '}';
     }
 }

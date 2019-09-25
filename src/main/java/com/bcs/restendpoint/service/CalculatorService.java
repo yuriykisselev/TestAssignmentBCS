@@ -7,4 +7,5 @@ import org.springframework.stereotype.Service;
 @Service
 public interface CalculatorService {
     OutputData calculateData(InputData inputData);
+    InputData getMarketData(InputData inputData);
 }
