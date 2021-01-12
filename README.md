@@ -1,38 +1,36 @@
+## Тестовое задание
+[Описание тестового задания](bcs-test-assignment.md)
+
 ## О приложении
 Приложение для группировки акций по секторам
  - *Принимает на вход список акций*
  - *Возвращает рассчитанную стоимость акций по секторам*
 
 ## Загрузка
-- Скачивание проекта через git
+* Скачивание проекта через git
 ```bash
 cd dir_for_project
 git clone https://github.com/yuriykisselev/TestAssignmentBCS.git
 ```
-- Скачивание проекта через браузер (zip файл)
+* Скачивание проекта через браузер (zip файл)
 
 ## Сборка проекта
-- Командой:
+* Командой:
 ```bash
-mvn clean install spring-boot:repackage
+gradle clean build
 ```
-- Стандартный maven package 
+* Плагины IDE
 
 ## Запуск
-- Запуск Application средствами IDE
-- Запуск сгенерированного Jar (после сборки лежит в корне папки target)
+* Запуск Application средствами IDE
+* Запуск сгенерированного Jar (после сборки лежит в build/libs/rest-endpoint.jar)
 
 ## Проверка работы приложения
-Использовать http запросы get или post **обязательно с телом (json)**
-- Основной URL: http://localhost:8080/calculate
-- Проверка получения данных из https://iexcloud.io/ через REST: 
-http://localhost:8080/getMarketData
+* Открыть swagger по адресу http://localhost:8080/swagger-ui.html и отправить запрос **обязательно с телом (json)** 
 
-> Удобно использовать SoapUI или Insomnia
+* Отправить POST запрос на url http://localhost:8080/calculate через любой инструмент 
+> Удобно использовать Postman, SoapUI или Insomnia
 
-## Тестирование
-- Запускается автоматически при сборке проекта
-- Запускается вручную средствами IDE
 
 ## Контакты
 Киселев Юрий Васильевич 

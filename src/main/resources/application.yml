@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: rest-endpoint
+management:
+  endpoints:
+    web.exposure.include: info,health,metrics,httptrace
+logging:
+  level:
+    org.springframework.web: DEBUG
+
+publicToken: pk_0f4db72e15a840f18e888969c29e1871
+latestPriceUrlTemplate: https://cloud.iexapis.com/stable/stock/%s/quote/latestPrice?token=%s
+sectorUrlTemplate: https://cloud.iexapis.com/stable/stock/%s/company?token=%s

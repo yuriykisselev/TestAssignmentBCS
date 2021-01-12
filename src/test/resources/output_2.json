@@ -1,0 +1,15 @@
+{
+  "value": 6954.240,
+  "allocations": [
+    {
+      "sector": "Technology Services",
+      "assetValue": 6536.470,
+      "proportion": 0.940
+    },
+    {
+      "sector": "Manufacturing",
+      "assetValue": 417.770,
+      "proportion": 0.060
+    }
+  ]
+}

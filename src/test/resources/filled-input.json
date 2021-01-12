@@ -1,0 +1,40 @@
+{
+  "value": 6954.24,
+  "stocks": [
+    {
+      "symbol": "AAPL",
+      "volume": 50,
+      "latestPrice": 128.885,
+      "sector": "Manufacturing",
+      "stockValue": 6444.25
+    },
+    {
+      "symbol": "HOG",
+      "volume": 10,
+      "latestPrice": 39.495,
+      "sector": "Manufacturing",
+      "stockValue": 394.95
+    },
+    {
+      "symbol": "MDSO",
+      "volume": 1,
+      "latestPrice": 92.22,
+      "sector": "Technology Services",
+      "stockValue": 92.22
+    },
+    {
+      "symbol": "IDRA",
+      "volume": 1,
+      "latestPrice": 4.29,
+      "sector": "Manufacturing",
+      "stockValue": 4.29
+    },
+    {
+      "symbol": "MRSN",
+      "volume": 1,
+      "latestPrice": 18.53,
+      "sector": "Manufacturing",
+      "stockValue": 18.53
+    }
+  ]
+}
